@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy50f6k4ov4ep"]
+
+[ext_resource type="Theme" uid="uid://cl7daepdmawmm" path="res://game_console/game_console_theme.tres" id="1_jmwsb"]
+[ext_resource type="Script" path="res://game_console/scripts/GameConsole.gd" id="2_pu7gl"]
+
+[node name="GameConsole" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_jmwsb")
+script = ExtResource("2_pu7gl")
+welcome_message = "-- GAME CONSOLE --"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 376.0
+grow_horizontal = 2
+theme = ExtResource("1_jmwsb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jmwsb")
+
+[node name="LogLabel" type="RichTextLabel" parent="Panel/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_jmwsb")
+bbcode_enabled = true
+scroll_following = true
+
+[node name="InputField" type="LineEdit" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("1_jmwsb")

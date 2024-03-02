@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cl7daepdmawmm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peh3f"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1phxn"]
+bg_color = Color(0, 0, 0, 0.498039)
+
+[resource]
+LineEdit/font_sizes/font_size = 15
+LineEdit/styles/normal = SubResource("StyleBoxFlat_peh3f")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 20
+MarginContainer/constants/margin_right = 20
+MarginContainer/constants/margin_top = 10
+Panel/styles/panel = SubResource("StyleBoxFlat_1phxn")
+RichTextLabel/font_sizes/normal_font_size = 15
