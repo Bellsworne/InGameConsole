@@ -12,7 +12,6 @@ extends Control
 @export var toggle_key_action: String = "debug"
 @export var enter_key_action: String = "accept"
 
-
 @onready var log_label = $Panel/VBoxContainer/MarginContainer/LogLabel
 @onready var input_field = $Panel/VBoxContainer/InputField
 
@@ -54,7 +53,6 @@ func register_command(command:Command):
 
 
 func submit_input():
-	print("submit")
 	if (input_field.text == ""): return
 	
 	print_line("> " + input_field.text)
@@ -118,6 +116,7 @@ func register_builtin_commands():
 	register_command(Command.new("clear", clear_command, [], "Clears the console"))
 	register_command(Command.new("help", help_command, ["command_name"], "Shows help for given command"))
 	register_command(Command.new("list", list_command, [], "Lists all registered commands."))
+
 
 func clear_command():
 	log_label.clear()
