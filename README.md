@@ -11,12 +11,10 @@ A drop-in in game console that can be used in any Godot 4.x project.
 
 
 ## Download and Install
-1. Go to the Releases page and download the latest zip.
-2. In Godot, open the Asset Library, click Import and import the downloaded zip
-3. Open Project setting, Autoloads, and add the `GameConsole.tscn` as GameConsole
-4. Reload the project
-5. Add two input actions in Project Settings, `debug` and `accept` OR change the default actions in the GameConsole settings (Open the GameConsole scene and change in the inspector)
-6. Profit
+1. Download the latset ZIP file from the releases section (or just download the source)
+2. Drop the `addons/ingameconsole` folder from the ZIP into the `addons` directory of your project (or drop the whole `addons` folder if you dont already have one)
+3. Open `Project Settings > Plugins` and enable the plugin
+4. Profit 
 
 
 ## Documentation
