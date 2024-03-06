@@ -1,10 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cy50f6k4ov4ep"]
 
-[ext_resource type="Theme" uid="uid://cl7daepdmawmm" path="res://addons/game_console/game_console_theme.tres" id="1_jmwsb"]
-[ext_resource type="Script" path="res://addons/game_console/scripts/GameConsole.gd" id="2_pu7gl"]
+[ext_resource type="Theme" uid="uid://cl7daepdmawmm" path="res://addons/ingameconsole/game_console_theme.tres" id="1_jmwsb"]
+[ext_resource type="Script" path="res://addons/ingameconsole/scripts/GameConsole.gd" id="2_pu7gl"]
 
 [node name="GameConsole" type="Control"]
 process_mode = 3
+z_index = 4096
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,7 +16,10 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("1_jmwsb")
 script = ExtResource("2_pu7gl")
-welcome_message = "-- GAME CONSOLE --"
+welcome_message = "### IN-GAME CONSOLE by BELLSWORNE ####
+> Type `list` to see availible commands
+
+[img=131x64]addons/ingameconsole/ps1hagrid.png[/img]"
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
