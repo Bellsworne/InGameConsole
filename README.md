@@ -14,7 +14,8 @@ A drop-in in game console that can be used in any Godot 4.x project.
 1. Download the latset ZIP file from the releases section (or just download the source)
 2. Drop the `addons/ingameconsole` folder from the ZIP into the `addons` directory of your project (or drop the whole `addons` folder if you dont already have one)
 3. Open `Project Settings > Plugins` and enable the plugin
-4. Profit 
+4. Ensure that either: There are two Input actions named `debug` and `accept` OR in the `GameConsole.tscn` in the inspector under 'Keybinds' that valid action names of your choice are set.
+5. Play the project and press whatever key you assigned to `debug` and you are done!
 
 
 ## Documentation
@@ -32,7 +33,14 @@ A drop-in in game console that can be used in any Godot 4.x project.
 1. Open a script (Has to be attached to a node in the scene)
 2. On `_ready` (or another function in `_ready`), register a new Command: 
 	```
-	GameConsole.register_command(Command.new("my_command", my_function, ["argument_one", "another_two"], "Description"))
+	GameConsole.register_command(
+ 		Command.new(
+	 		"my_command",
+	 		my_function,
+	 		["argument_one", "argument_two"],
+	 		"Description"
+ 		)
+ 	)
 	```
 3. Create the function: 
 	```
