@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="InGameConsole"
-run/main_scene="res://addons/game_console/test_scene.tscn"
+run/main_scene="res://addons/ingameconsole/test_scene.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
 
-GameConsole="*res://addons/game_console/GameConsole.tscn"
+GameConsole="*res://addons/ingameconsole/GameConsole.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ingameconsole/plugin.cfg")
 
 [input]
 

@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cirsv2n2ym87b"]
+
+[sub_resource type="GDScript" id="GDScript_0a8if"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	GameConsole.register_command(Command.new(\"test\", test_command, [\"my_arg\"], \"I am a test command\"))
+	
+func test_command(args:Dictionary):
+	GameConsole.log_debug(args[\"my_arg\"])
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j23v7"]
+
+[node name="TestScene" type="Node2D"]
+script = SubResource("GDScript_0a8if")
+
+[node name="Ps1Haggrid_png" type="Sprite2D" parent="."]
+position = Vector2(613, 316)
+texture = SubResource("CompressedTexture2D_j23v7")
