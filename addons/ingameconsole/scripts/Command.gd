@@ -15,7 +15,8 @@ func _init(_name:String, _callable:Callable, _arg_names:Array[String], _descript
 func INVOKE(args:Array[String] = []):
 	var arg_dict: Dictionary = {}
 	if (arg_names.size() != args.size()):
-		GameConsole.log_error("Command needs " + str(arg_names.size()) + " arguments but recieved " + str(args.size()) + ".")
+		if (ProjectSettings.get_setting("_global_script_classes").has("GameConsole")): 
+			ProjectSettings.get_setting("_global_script_classes")["GameConsole"].log_error("Command needs " + str(arg_names.size()) + " arguments but recieved " + str(args.size()) + ".")
 		return
 	else:
 		for i in args.size():
